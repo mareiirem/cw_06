@@ -1,12 +1,17 @@
 <?php
-// db.php — Include this file at the top of every CRUD script
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $host = "localhost";
-$user = "your_username";   // Your GSU username
-$pass = "your_password";   // Your MySQL password
-$db   = "myDB";            // DB name for this class
+$user = "rali24";
+$pass = "rali24";
+$db   = "rali24";
 
 $conn = new mysqli($host, $user, $pass, $db);
+
 if ($conn->connect_error) {
     die("DB Error: " . $conn->connect_error);
 }
-// $conn is now available in any file that requires this
+
+echo "Connection successful";
+?>
